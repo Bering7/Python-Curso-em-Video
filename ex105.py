@@ -1,5 +1,5 @@
 # rc = report card
-def notas(*num, sit=False):
+'''def notas(*num, sit=False):
     for c in range(1, len(num)+1):
         for value in num:
             if c == 1:
@@ -22,11 +22,11 @@ def notas(*num, sit=False):
         rc['situation'] = situation
     print(rc)
 
-notas(4, 11, 3, 1, 5, 10, 9, sit=False)
+notas(4, 11, 3, 1, 5, 10, 9, sit=False)'''
 
 #jeito mais fácil
 def notas(*num, sit=False):
-    rc = dict{}
+    rc = dict()
     rc['total'] = len(num)
     rc['highest'] = max(num)
     rc['lowest'] = min(num)
