@@ -11,11 +11,30 @@ def notas(*num, sit=False):
                 if value < lowest:
                     lowest = value
     average = sum(num)/len(num)
-    rc = {'highest':highest, 'lowest':lowest, 'avarege':average}
+    rc = {'total':len(num), 'highest':highest, 'lowest':lowest, 'average':average}
     if sit == True:
         if average < 5:
             situation = 'BAD'
         elif average > 5 and average < 7:
+            situation ='AVERAGE'
+        else:
+            situation = 'GOOD'
+        rc['situation'] = situation
+    print(rc)
+
+notas(4, 11, 3, 1, 5, 10, 9, sit=False)
+
+#jeito mais fácil
+def notas(*num, sit=False):
+    rc = dict{}
+    rc['total'] = len(num)
+    rc['highest'] = max(num)
+    rc['lowest'] = min(num)
+    rc['average'] = sum(num)/len(num)
+    if sit == True:
+        if rc['average'] < 5:
+            situation = 'BAD'
+        elif rc['average'] > 5 and rc['average'] < 7:
             situation ='AVERAGE'
         else:
             situation = 'GOOD'
