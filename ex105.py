@@ -1,5 +1,5 @@
 # rc = report card
-'''def notas(*num, sit=False):
+def notas(*num, sit=False):
     for c in range(1, len(num)+1):
         for value in num:
             if c == 1:
@@ -12,7 +12,7 @@
                     lowest = value
     average = sum(num)/len(num)
     rc = {'total':len(num), 'highest':highest, 'lowest':lowest, 'average':average}
-    if sit == True:
+    if sit:
         if average < 5:
             situation = 'BAD'
         elif average > 5 and average < 7:
@@ -22,7 +22,7 @@
         rc['situation'] = situation
     print(rc)
 
-notas(4, 11, 3, 1, 5, 10, 9, sit=False)'''
+notas(4, 11, 3, 1, 5, 10, 9, sit=False)
 
 #jeito mais fácil
 def notas(*num, sit=False):
@@ -33,12 +33,11 @@ def notas(*num, sit=False):
     rc['average'] = sum(num)/len(num)
     if sit == True:
         if rc['average'] < 5:
-            situation = 'BAD'
+            rc['situation'] = 'BAD'
         elif rc['average'] > 5 and rc['average'] < 7:
-            situation ='AVERAGE'
+            rc['situation'] = 'AVERAGE'
         else:
-            situation = 'GOOD'
-        rc['situation'] = situation
+            rc['situation'] = 'GOOD'
     print(rc)
 
 notas(4, 11, 3, 1, 5, 10, 9, sit=False)
