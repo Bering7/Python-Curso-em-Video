@@ -1,5 +1,11 @@
 # rc = report card
 def notas(*num, sit=False):
+    """
+    Docstring for notas
+    
+    :param num: Description
+    :param sit: 
+    """
     for c in range(1, len(num)+1):
         for value in num:
             if c == 1:
