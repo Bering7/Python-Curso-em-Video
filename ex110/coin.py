@@ -1,7 +1,7 @@
 def coin(price = 0, coin = 'R$'):
     return f'{coin}{price:.2f}'.replace('.', ',')
 
-def increase(price=0, rate=0, formatting = True):
+def increase(price=0, rate=30, formatting = True):
     increase = price + (price * rate/100)
     if formatting:
         increase = coin(increase)
@@ -17,7 +17,7 @@ def half(price = 0, formatting = True):
     half = price / 2
     return coin(half) if formatting else half
 
-def decrease(price = 0, rate = 0, formatting = True):
+def decrease(price = 0, rate = 40, formatting = True):
     decrease = price - (price * rate/100)
     return coin(decrease) if formatting else decrease
 
