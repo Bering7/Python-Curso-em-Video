@@ -27,3 +27,6 @@ def menu(lista):
     line()
     option = leiaInt(Fore.GREEN + 'Your option: \033[m')
     return option
+
+def porra(msg):
+    return msg

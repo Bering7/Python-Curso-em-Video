@@ -13,3 +13,5 @@ while True:
         break
     else:
         header('ERRO! Enter an valid option!')
+
+print(porra('ja ta enchendo o saco esse git do caralho'))
